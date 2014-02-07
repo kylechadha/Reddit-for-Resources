@@ -10,7 +10,13 @@
 # Post.destroy_all
 
 Post.create([
-  { source: "37 Signals", title: "Getting Real", desc: "The smarter, faster, easier way to build a successful web application", url: "http://gettingreal.37signals.com/3705222012-getting_real.pdf"},
-  { source: "The Economist", title: "A cambrian moment: Tech Startups", desc: "Cheap and ubiquitous building blocks for digital products and services have caused an explosion in startups. Ludwig Siegele weighs its significance.", url: "http://media.economist.com/sites/default/files/sponsorships/%5BKY56b%5DHuawei/180114_SR.pdf"},
-  { source: "Quora", title: "What are the top Ruby on Rails Development shops in the US?", desc: "", url: "http://www.quora.com/Ruby-on-Rails-web-framework/What-are-the-top-Ruby-on-Rails-Development-shops-in-the-U-S"}
+  { title: "Getting Real: The smarter, faster, easier way to build a successful web application", source: "37 Signals", url: "http://gettingreal.37signals.com/3705222012-getting_real.pdf"},
+  { title: "A cambrian moment: Tech Startups", source: "The Economist", url: "http://media.economist.com/sites/default/files/sponsorships/%5BKY56b%5DHuawei/180114_SR.pdf"},
+  { title: "What are the top Ruby on Rails Development shops in the US?", source: "Quora", url: "http://www.quora.com/Ruby-on-Rails-web-framework/What-are-the-top-Ruby-on-Rails-Development-shops-in-the-U-S"}
+  ])
+
+User.create([
+  { email: "kyle.chadha@gmail.com", name: "Kyle", rep: 325 },
+  { email: "alysha@gmail.com", name: "Alysha", rep: 40 },
+  { email: "diana@gmail.com", name: "Diana", rep: 136 },
   ])

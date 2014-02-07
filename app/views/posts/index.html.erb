@@ -4,16 +4,16 @@
 <table>
 <tr>
   <th>Title</th>
-  <th>Description</th>
+  <th>Source</th>
   <th>URL</th>
   <th>Category</th>
 </tr>
 <% @posts.each do |post| %>
 <tr>
   <td><%= post.title %></td>
-  <td><%= post.desc %></td>
-  <td><%= post.url %></td>
-  <td></td>
+  <td><%= post.source %></td>
+  <td><a href="<%= post.url %>"><%= post.url %></a></td>
+  <td><%#= post.category_ids ? post.category_ids[0].name : "" %></td>
 </tr>
 <% end %>
 </table>
