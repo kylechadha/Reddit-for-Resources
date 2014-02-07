@@ -1,0 +1,19 @@
+<h1>And it ...BEGINS</h1>
+
+<h2>List of Posts</h2>
+<table>
+<tr>
+  <th>Title</th>
+  <th>Description</th>
+  <th>URL</th>
+  <th>Category</th>
+</tr>
+<% @posts.each do |post| %>
+<tr>
+  <td><%= post.title %></td>
+  <td><%= post.desc %></td>
+  <td><%= post.url %></td>
+  <td></td>
+</tr>
+<% end %>
+</table>
