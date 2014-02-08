@@ -1,3 +1,8 @@
+#Questions
+#1. How do I provide a default value for 'rep' of 10?
+#2. How do I construct proper password confirmation and validation?
+#3. How to create proper views/errors for when a signup field is left blank or a password is incorrect
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

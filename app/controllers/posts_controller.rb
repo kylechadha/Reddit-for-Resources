@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
     if @post.save
       redirect_to action: 'index'
-      flash[:notice] = "Successfully submitted order!"
+      flash[:notice] = "Successfully submitted post!"
     else
       render action: 'new'
     end

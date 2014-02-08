@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RedditForResources</title>
+  <title>Toppicks</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
+  <p style="color: tomato; font-size: 16px" class="notice"><%= flash[:notice] %></p>
+  <p class="error"><%= flash[:error] %></p>
 
 <%= yield %>
 
