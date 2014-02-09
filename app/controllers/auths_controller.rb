@@ -13,6 +13,10 @@ class AuthsController < ApplicationController
       session[:user_id] = user.id
       flash[:notice] = "Welcome, #{current_user.name}!"
       redirect_to posts_path
+    else
+      # render action: 'new'
+      redirect_to login_path
+      flash[:notice] = "Incorrect username or password."
     end
   end
 
