@@ -8,6 +8,6 @@ RedditForResources::Application.routes.draw do
   get 'login' => 'auths#new'
   delete 'logout' => 'auths#destroy'
 
-  root to: 'posts#index'
+  root 'posts#index'
 
 end

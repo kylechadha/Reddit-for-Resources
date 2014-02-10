@@ -1,0 +1,24 @@
+
+$navbar-height: 60px;
+$navbar-default-color: white;
+$navbar-default-link-color: white;
+$navbar-default-link-hover-color: black;
+$navbar-default-bg: skyblue;
+$navbar-border-radius: 0px;
+
+$font-size-base: 16px;
+
+@import "bootstrap";
+
+.navtext {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+button a {
+  color: white;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}

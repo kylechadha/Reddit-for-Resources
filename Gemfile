@@ -7,6 +7,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.1.0'
+gem 'bootstrap_form'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -33,6 +34,9 @@ end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
+
+gem 'guard'
+gem 'guard-livereload', require: false
 
 # Use unicorn as the app server
 # gem 'unicorn'

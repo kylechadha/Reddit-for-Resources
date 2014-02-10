@@ -8,13 +8,17 @@ class AuthsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:user][:email])
-    if user.authenticated?(params[:user][:password])
-      session[:user_id] = user.id
-      flash[:notice] = "Welcome, #{current_user.name}!"
-      redirect_to posts_path
-    else
-      # render action: 'new'
+    begin
+      user = User.find_by(email: params[:user][:email])
+      if user.authenticated?(params[:user][:password])
+        session[:user_id] = user.id
+        flash[:notice] = "Welcome, #{current_user.name}!"
+        redirect_to posts_path
+      else
+        redirect_to login_path
+        flash[:notice] = "Incorrect username or password."
+      end
+    rescue 
       redirect_to login_path
       flash[:notice] = "Incorrect username or password."
     end
