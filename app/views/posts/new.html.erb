@@ -16,10 +16,10 @@
     <%= f.text_field :url %>
   </div>
 
-  <div>
-    <!-- Category -->
-    <%#= f.select :type, ['Burrito', 'Taco', 'Quesadilla', 'Salad Bowl'] %>
-  </div>
+  <fieldset>
+    <%= f.label :category %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+  </fieldset>
 
   <div><%= f.submit %></div>
 

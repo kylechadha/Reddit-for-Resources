@@ -35,8 +35,11 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 
-gem 'guard'
-gem 'guard-livereload', require: false
+group :development do
+  gem 'guard'
+  gem 'guard-livereload', require: false
+  gem 'rack-livereload'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'

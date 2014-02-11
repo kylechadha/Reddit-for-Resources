@@ -1,4 +1,10 @@
+
+<div class="container">
+  <button type="button" class="btn btn-primary btn-default pull-right"><span class="glyphicon glyphicon-plus"></span> <%= link_to "Add a Resource", new_post_path %></button>
+</div>
+
 <h2>List of Posts</h2>
+
 <table>
 <tr>
   <th>Title</th>
@@ -11,7 +17,7 @@
   <td><%= post.title %></td>
   <td><%= post.source %></td>
   <td><a href="<%= post.url %>"><%= post.url %></a></td>
-  <td><%#= post.category_ids ? post.category_ids[0].name : "" %></td>
+  <td><ul><%= render post.categories %></ul></td>
 </tr>
 <% end %>
 </table>
